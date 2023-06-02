@@ -11,8 +11,8 @@ jobs:
       matrix:
         node-version: [17.x]
     steps:
-      - uses: actions/setup-node@v3
       - name: Starting Node.js ${{ matrix.version }}
+      - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.version }}
       - name: Install modules
