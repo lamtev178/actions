@@ -6,7 +6,8 @@ on:
       - main
       - "features/**"
 jobs:
-  example_matrix:
+  init:
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [17.x]
