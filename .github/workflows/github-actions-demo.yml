@@ -18,5 +18,7 @@ jobs:
       - if: ${{ matrix.npm }}
         run: npm install -g npm@${{ matrix.npm }}
       - run: npm --version
+      - name: Install modules
+        run: npm install
       - name: Start tests
         run: npm run jest
