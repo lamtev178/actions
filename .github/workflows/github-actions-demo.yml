@@ -24,7 +24,7 @@ jobs:
       - if: ${{ matrix.npm }}
         run: npm install -g npm@${{ matrix.npm }}
       - name: prettier check
-        run: npm lint:prettier
+        run: npm run lint:prettier
       - name: Install modules
         run: npm install
       - name: Start tests
