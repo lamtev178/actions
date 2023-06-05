@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      - "features/**"
+      - 'features/**'
 jobs:
   init:
     runs-on: ubuntu-latest
@@ -19,7 +19,8 @@ jobs:
           node-version: ${{ matrix.node }}
       - if: ${{ matrix.npm }}
         run: npm install -g npm@${{ matrix.npm }}
-      - run: npm --version
+      - name: prettier check
+        run: lint:prettier
       - name: Install modules
         run: npm install
       - name: Start tests

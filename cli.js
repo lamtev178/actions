@@ -22,10 +22,7 @@ function getFederationTypesUrl(remotesUrl) {
     process.exit(1);
   }
 
-  return remotesUrl.replace(
-    /remoteEntry.js/,
-    `federated-types/${fileName}.d.ts`
-  );
+  return remotesUrl.replace(/remoteEntry.js/, `federated-types/${fileName}.d.ts`);
 }
 
 const findRemotesConfig = (base) => {
@@ -37,10 +34,7 @@ const findRemotesConfig = (base) => {
     const newBase = path.join(base, file);
     if (file === "remotes.config.json") {
       return path.resolve("./", newBase);
-    } else if (
-      fs.statSync(newBase).isDirectory() &&
-      !newBase.includes("node_modules")
-    ) {
+    } else if (fs.statSync(newBase).isDirectory() && !newBase.includes("node_modules")) {
       queue.push(newBase);
     }
   }
@@ -81,9 +75,7 @@ try {
       console.log("STATUS", statusCode);
 
       if (statusCode !== 200) {
-        console.error(
-          `Request with url: ${url} Failed.\n` + `Status Code: ${statusCode}`
-        );
+        console.error(`Request with url: ${url} Failed.\n` + `Status Code: ${statusCode}`);
         return;
       }
 

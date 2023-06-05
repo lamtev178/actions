@@ -1,1 +1,1 @@
-export * from './webpackApp';
+export * from "./webpackApp";
