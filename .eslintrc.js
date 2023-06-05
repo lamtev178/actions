@@ -3,4 +3,9 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
   extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
+  rules: {
+    "@typescript-eslint/no-var-requires": "off",
+    "no-undef": "off",
+    "@typescript-eslint/triple-slash-reference": "off",
+  },
 };

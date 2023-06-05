@@ -27,5 +27,7 @@ jobs:
         run: npm install
       - name: prettier check
         run: npm run lint:prettier
+      - name: eslint check
+        run: npm run lint:eslint
       - name: Start tests
         run: npm test
